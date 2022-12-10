@@ -92,6 +92,7 @@ async function removeGigMsg(gigId, msgId) {
 
 ////////////////////Backend /////////////////////
 
+
 function _buildCriteria(filterBy) {
     var criteria = {}
 
