@@ -33,6 +33,10 @@ function setupSocketAPI(http) {
         socket.on('editOrder', order => {
             broadcast({type:'send to seller', data:order,userId:socket.userId})
         })
+        socket.on('changeStatus', status => {
+            broadcast({type:'status update', data:status,userId:socket.userId})
+        })
+        //changeStatus
 
         socket.on('user ordered', (msg) => {
             broadcast({type:'a new order', data:msg,userId:socket.userId})
